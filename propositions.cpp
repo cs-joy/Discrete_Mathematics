@@ -1,10 +1,12 @@
 /**
  * @ Topic:: Proposition Logic
  * ---------------------------
+ * Conjunction
+ * Disjunction
+ * Exclusive Or
  * Implication
  * Bi Implication
 */
-
 
 #include <iostream>
 #include <string>
@@ -36,6 +38,18 @@ string _disjunction() {
 }
 
 
+string exclusiveOr() {
+    bool p = true;
+    bool q = false;
+    
+    if (p != q) {
+        return "T";
+    }
+    
+    return "F";
+}
+
+
 string implication() {
     bool p = true;
     bool q = false;
@@ -61,13 +75,15 @@ string bi_implication() {
 
 int main()
 {
-    cout << "conjunction" << endl << _conjunction() << endl;
+    cout << "conjunction:: " << _conjunction() << endl;
     
-    cout << "disjunction" << endl << _disjunction() << endl;
+    cout << "disjunction:: " << _disjunction() << endl;
     
-    cout << "implication" << endl << implication() << endl;
+    cout << "exclusiveOr:: " << exclusiveOr() << endl;
     
-    cout << "bi_implication" << endl << bi_implication() << endl;
+    cout << "implication:: " << implication() << endl;
+    
+    cout << "bi_implication:: " << bi_implication() << endl;
 
 
     return 0;
