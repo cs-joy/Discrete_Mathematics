@@ -88,3 +88,15 @@ int main()
 
     return 0;
 }
+
+/*
+
+expected output::
+_________________
+conjunction:: T
+disjunction:: F
+exclusiveOr:: T
+implication:: F
+bi_implication:: T
+
+*/
