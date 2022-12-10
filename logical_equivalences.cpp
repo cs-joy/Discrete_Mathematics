@@ -106,6 +106,23 @@ void distributiveLaws() {
 }
 
 
+void deMorgansLaws() {
+    bool p = true;
+    bool q = true;
+    
+    bool r1 = !(p && q);
+    bool r2 = !p || !q;
+    if(r1 == r2) {
+        cout << "¬(p ∧ q) == ¬p V ¬q" << endl;
+    }
+    
+    bool r11 = !(p || q);
+    bool r21 = !p && !q;
+    if(r11 == r21) {
+        cout << "¬(p V q) == ¬p ∧ ¬q" << endl;
+    }
+}
+
 int main()
 {
     identityLaws();
@@ -115,6 +132,7 @@ int main()
     commutativeLaws();
     associatveLaws();
     distributiveLaws();
+    deMorgansLaws();
 
     return 0;
 }
