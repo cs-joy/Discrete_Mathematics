@@ -28,10 +28,24 @@ void dominationLaws() {
 }
 
 
+void idempotentLaws() {
+    bool p = true;
+    
+    if (p && p) {
+        cout << "p" << endl;
+    }
+    
+    if(p || p) {
+        cout << "p" << endl;
+    }
+}
+
+
 int main()
 {
     identityLaws();
     dominationLaws();
+    idempotentLaws();
 
     return 0;
 }
