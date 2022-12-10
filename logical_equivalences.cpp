@@ -65,6 +65,28 @@ void commutativeLaws() {
 }
 
 
+
+void associatveLaws() {
+    bool p = true;
+    bool q = true;
+    bool r = true;
+    
+    bool res1 = (p || q) || r;
+    bool res2 = p || (q || r);
+    
+    if (res1 == res2) {
+        cout << "true" << endl;
+    }
+    
+    bool res11 = (p && q) && r;
+    bool res21 = p && (q && r); 
+    if (res11 == res21) {
+        cout << "true" << endl;
+    }
+    
+}
+
+
 int main()
 {
     identityLaws();
@@ -72,6 +94,7 @@ int main()
     idempotentLaws();
     doubleNegationLaws();
     commutativeLaws();
+    associatveLaws();
 
     return 0;
 }
