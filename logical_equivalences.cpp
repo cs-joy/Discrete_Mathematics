@@ -51,6 +51,19 @@ void doubleNegationLaws() {
 }
 
 
+void commutativeLaws() {
+    bool p = true;
+    bool q = false;
+    
+    if (p && q == q && p) {
+        cout << "p^q == q^p" << endl;
+    }
+    
+    if (p || q == q || p) {
+        cout << "p∨q == q∨p" << endl;
+    }
+}
+
 
 int main()
 {
@@ -58,6 +71,7 @@ int main()
     dominationLaws();
     idempotentLaws();
     doubleNegationLaws();
+    commutativeLaws();
 
     return 0;
 }
