@@ -123,6 +123,24 @@ void deMorgansLaws() {
     }
 }
 
+
+void absorptionLaws() {
+    bool p = true;
+    bool q = true;
+    
+    bool r101 = p || (p && q);
+    bool r201 = p && (p || q);
+    
+    if(r101 == p) {
+        cout << "p V (p ∧ q) == p" << endl;
+    }
+    
+    if (r201 == p) {
+        cout << "p ∧ (p V q) == p" << endl;
+    }
+}
+
+
 int main()
 {
     identityLaws();
@@ -133,6 +151,7 @@ int main()
     associatveLaws();
     distributiveLaws();
     deMorgansLaws();
+    absorptionLaws();
 
     return 0;
 }
