@@ -141,6 +141,22 @@ void absorptionLaws() {
 }
 
 
+void negationLaws() {
+    bool p = true;
+    
+    bool re1 = p || !p;
+    if(re1 == true) {
+        cout << "p V ¬p == T" << endl;
+    }
+    
+    bool re2 = p && !p;
+    if (re2 == false) {
+        cout << "p ∧ ¬p == F" << endl;
+    }
+    
+}
+
+
 int main()
 {
     identityLaws();
@@ -152,6 +168,7 @@ int main()
     distributiveLaws();
     deMorgansLaws();
     absorptionLaws();
+    negationLaws();
 
     return 0;
 }
