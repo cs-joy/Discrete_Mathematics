@@ -87,6 +87,25 @@ void associatveLaws() {
 }
 
 
+void distributiveLaws() {
+    bool p = true;
+    bool q = true;
+    bool r = true;
+    
+    bool result1 = p || (q && r);
+    bool result2 = (p || q) && (q || r);
+    if(result1 == result2) {
+        cout << "equivalent" << endl;
+    }
+    
+    bool result11 = p && (q || r);
+    bool result21 = (p && q) || (q && r);
+    if(result11 == result21) {
+        cout << "equivalent" << endl;
+    }
+}
+
+
 int main()
 {
     identityLaws();
@@ -95,6 +114,7 @@ int main()
     doubleNegationLaws();
     commutativeLaws();
     associatveLaws();
+    distributiveLaws();
 
     return 0;
 }
