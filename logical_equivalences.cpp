@@ -41,11 +41,23 @@ void idempotentLaws() {
 }
 
 
+
+void doubleNegationLaws() {
+    bool p = true;
+    
+    if (!(!p)) {
+        cout << p << endl;
+    }
+}
+
+
+
 int main()
 {
     identityLaws();
     dominationLaws();
     idempotentLaws();
+    doubleNegationLaws();
 
     return 0;
 }
